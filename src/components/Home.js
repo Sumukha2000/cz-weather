@@ -35,7 +35,7 @@ function Home() {
     }
     return (
         <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ?
-            "home-warm" : "home") : "home-warm"} >
+            "home-warm" : "home") : "home"} >
             <main>
                 <div className="welcome">
                     Welcome to Z-Weather App! 
