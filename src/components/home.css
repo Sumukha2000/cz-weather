@@ -36,8 +36,8 @@ main {
 .welcome{
     display:flex;
     flex-direction:column;
-    font-size:30px;
-    font-weight:bold;
+    font-size:32px;
+    font-weight:700;
     position:relative;
     align-items:center;
    
