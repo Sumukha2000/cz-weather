@@ -35,13 +35,16 @@ function Home() {
     }
     return (
         <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ?
-            "home-warm" : "home") : "home"} >
+            "home-warm" : "home") : "home-warm"} >
             <main>
+                <div className="welcome">
+                    Welcome to Z-Weather App! 
+                    </div>
                 <div className="search-box">
                   
                     <input type="search"
                         className="search-bar"
-                        placeholder="Search..."
+                        placeholder="Search for the location..."
                         onChange={e => setQuery(e.target.value)}
                         value={query}
                         onKeyPress={search }
@@ -59,7 +62,7 @@ function Home() {
                 <div className="weather-box">
                             <div className="temp">{ weather.main.temp }<span >&#176;</span>c</div>
                             <div className="weather">
-                                <p>{weather.weather[0].main}</p>
+                                
                                 <p>{weather.weather[0].description}</p>
                               
                                 </div>

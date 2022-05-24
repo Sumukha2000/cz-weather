@@ -2,38 +2,55 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Nunito Sans', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
+    
 }
 
 .home {
-    background-image: url('./../assets/cold-bg.jpg');
+    background-image: url('./../assets/cold-bg-1.jpg');
+    width:100%;
+    
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
     transition: 0.4s ease;
 }
 main {
     min-height: 100vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
-    padding: 25px;
+    padding: 65px;
 }
 
 
 .home-warm {
-    background-image: url('./../assets/warm-bg.jpg');
+    background-image: url('./../assets/warm-bg-1.jpg');
     background-size: cover;
     background-position: bottom;
     transition: 0.4s ease;
 }
-
+.welcome{
+    display:flex;
+    flex-direction:column;
+    font-size:30px;
+    position:relative;
+    align-items:center;
+   
+    margin-top:20px;
+    color:white;
+}
 .search-box {
+
     width: 100%;
     margin: 0 0 75px;
 }
 
     .search-box .search-bar {
+       
         display: block;
         width: 100%;
         padding: 15px;
@@ -42,8 +59,8 @@ main {
         border: none;
         outline: none;
         background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 16px 16px;
-        margin-top: -25px;
+        border-radius: 16px 16px 16px 16px;
+        margin-top: 25px;
         box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
         color: black;
         font-size: 20px;
@@ -62,6 +79,7 @@ main {
 
 .location-box .location {
     color: #FFF;
+    margin-top:-40px;
     font-size: 32px;
     font-weight: 500;
     text-align: center;
@@ -71,6 +89,7 @@ main {
 .location-box .date {
     color: #FFF;
     font-size: 20px;
+
     font-weight: 300;
     font-style: italic;
     text-align: center;
@@ -103,4 +122,81 @@ main {
         font-weight: 700;
         text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
     }
+
+@media screen and (max-width:415px)
+{
     
+        .welcome{
+        
+        text-align:center;
+        
+    }
+    .weather-box{
+        padding-top: 50px;
+    }
+    .weather{
+
+        padding-top:20px;
+    }
+    .location{
+        padding-top:40px;
+    }
+}
+@media screen and (max-width:528px)
+{
+
+    .search-box {
+        width: 100%;
+        margin: 30px 0 75px;
+    }
+    .welcome{
+        font-style:bold;
+        font-weight:400px;
+        margin-top:30px;
+        text-align:center;
+        }
+    ::placeholder
+    {
+        font-size:18px;
+    }
+    .location-box .location {
+        color: #FFF;
+        font-size: 22px;
+        font-weight: 300;
+        text-align: center;
+        text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+    }
+
+    .location-box .date {
+        color: #FFF;
+        margin-top:4px;
+        font-size: 15px;
+        font-weight: 300;
+        font-style: italic;
+        text-align: center;
+        text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+    }
+    .weather-box .temp {
+        position: relative;
+        display: inline-block;
+        margin: 2px auto;
+        margin-right:10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        padding: 10px 20px;
+        color: #FFF;
+        font-size: 60px;
+        font-weight: 600;
+        text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+        text-align: center;
+        box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .weather-box .weather {
+        color: #FFF;
+
+        font-size: 24px;
+        font-weight: 500;
+        text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+    }
+}
