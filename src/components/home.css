@@ -37,6 +37,7 @@ main {
     display:flex;
     flex-direction:column;
     font-size:30px;
+    font-weight:bold;
     position:relative;
     align-items:center;
    
